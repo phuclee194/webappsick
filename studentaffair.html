@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>
+        Welcome to Robot Guide 
+    </title>
+    <style>
+        body {
+            font-family: arial,verdana,sans-serif,Georgia, "Times New Roman", Times, serif;
+            text-align: center;
+            background: #cceeff;
+        }
+
+        h1 {
+            text-shadow: 5px 5px 5px #aaaaaa;
+        }
+
+        .button {
+            background-color: none;
+            border: none;
+            color: red;
+            padding 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+
+
+
+    </style>
+
+  
+     </head>
+<body>
+    <h1>Welcome to Robot Gudie</h1>
+    <p>Please select where do you want to go</p>
+    <a href=" t.html" class=" button">GOBACK</a>
+    <button onclick="studentaffair()">GO</button>
+    
+    <p>
+        this is is where you put some basic information about this place , some picture </br>
+    And you have to write program that google assistant can read this text .... </br>
+    
+    </p>
+</body>
+
+
+
+<script>
+
+    var xmlhttp;
+    xmlhttp = new XMLHttpRequest();
+
+
+   
+    function studentaffair() {
+        xmlhttp.open("GET", "cgi-bin/studentaffair.cgi", true);
+        xmlhttp.send();
+        alert ("follow me to student affair")
+    }
+   
+
+
+</script>
+
+</html>

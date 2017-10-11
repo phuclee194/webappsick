@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>
+        Welcome to Robot Guide 
+    </title>
+    <style>
+        body {
+            font-family: arial,verdana,sans-serif,Georgia, "Times New Roman", Times, serif;
+            text-align: center;
+            background: #cceeff;
+        }
+
+        h1 {
+            text-shadow: 5px 5px 5px #aaaaaa;
+        }
+        
+    </style>
+
+  
+     </head>
+<body>
+    <h1>Welcome to Robot Gudie</h1>
+    <p>Click the button below to go and click place on map to get more information</p>
+    <button onclick="library() ;">LIBRARY</button>
+    <button onclick="studentaffair()">STUDENT AFFAIR</button>
+    <button onclick="lab()">LAB</button>
+    <button onclick="canteen()">CANTEEN</button>
+
+    <img src="source/map.jpg" alt="map"   usemap=" #schmap"/>
+   
+    <map name="schmap" id="Map">
+        <area alt="studentaffair" title="Studentaffair" href="studentaffair.html" shape="rect" coords="157,471,423,512" />
+        <area alt="lab" title="LAB" href="lab.html" shape="rect" coords="714,351,816,393" />
+        <area alt="canteen" title="CANTEEN" href="canteen.html" shape="rect" coords="1015,435,1132,472" />
+        <area alt="library" title="LIBRARY" href="library.html" shape="rect" coords="904,788,1111,842" />
+        
+    </map>
+</body>
+
+
+
+<script>
+
+    var xmlhttp;
+    xmlhttp = new XMLHttpRequest();
+
+
+    function library() {
+        
+        xmlhttp.open("GET", "cgi-bin/library.cgi", true);
+        xmlhttp.send();
+        alert ("follow me to the library")
+    }
+    function studentaffair() {
+        xmlhttp.open("GET", "cgi-bin/studentaffair.cgi", true);
+        xmlhttp.send();
+        alert("follow me to the studentaffair")
+    }
+    function lab() {
+    
+        xmlhttp.open("GET", "cgi-bin/lab.cgi", true);
+        xmlhttp.send();
+        alert("follow me to the lab")
+        
+    }
+    function canteen() {
+        xmlhttp.open("GET", "cgi-bin/canteen.cgi", true);
+        xmlhttp.send();
+        alert("follow me to the canteen")
+    }
+
+
+
+</script>
+
+</html>
